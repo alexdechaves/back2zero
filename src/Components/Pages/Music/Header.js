@@ -7,15 +7,13 @@ import CardContent from '@material-ui/core/CardContent';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
+import ReactPlayer from 'react-player'
+import "./Header.css"
 
 const useStyles = makeStyles({
   root: {
     width: "100%",
-  },
-  media: {
-    height: 200,
-    width: "100%"
-  },
+  }
 });
 
 export default function Header() {
@@ -24,11 +22,12 @@ export default function Header() {
   return (
     <Card className={classes.root}>
       <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image="/PLU.png"
-          title="People Like Us"
-        />
+        <div className="player-container">
+          <ReactPlayer
+            controls="true"
+            url='https://www.youtube.com/watch?v=V0qEO9pdDGU'
+          />
+         </div>
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
             People Like Us
@@ -44,6 +43,7 @@ export default function Header() {
         </Button>
         <Button size="small" color="primary">
           Watch Music Video
+          <a href="https://www.youtube.com/watch?v=V0qEO9pdDGU" target="_blank"></a>
         </Button>
       </CardActions>
     </Card>

@@ -9,7 +9,7 @@ let musicArr = [
   {
     uri: 'spotify:album:5LLA2dXznKSDHJ3M3dx5EP',
     title: 'People Like Us',
-    image: ''
+    image: '/PLU_COVER_YELLOW.png'
   },
   {
     uri: 'spotify:album:5RnwsjBGl6TEF266LZqfIT',
@@ -19,12 +19,12 @@ let musicArr = [
   {
     uri: 'spotify:album:6czQbpyJwxb4Rp0S1rOUgP',
     title: 'Drive',
-    image: ''
+    image: '/DRIVE.jpg'
   },
   {
     uri: 'spotify:album:45JKHwLPYS31eA8cuOSNAf',
     title: 'Here, Alone',
-    image: ''
+    image: '/HERE_ALONE.jpg'
   }
 ]
 
