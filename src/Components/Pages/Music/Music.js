@@ -1,25 +1,17 @@
-import SpotifyPlayer from 'react-spotify-player';
+import StreamDownload from "./StreamDownload";
 import Header from "./Header"
 import React from "react"
  
-export default function Music() {
-    // size may also be a plain string using the presets 'large' or 'compact'
-    const size = {
-        width: '100%',
-        height: 300,
-    };
-    const view = 'list'; // or 'coverart'
-    const theme = 'black'; // or 'white'
+export default function Music(props) {
+    const AllMusic = props.musicArr.map((content, index) => {
+        return <StreamDownload title={content.title} key={index} uri={content.uri}/>
+    })
+
     
     return(
         <div>
             <Header />
-            <SpotifyPlayer
-            uri="spotify:album:04mkS7FooK8fRbB626T9NR"
-            size={size}
-            view={view}
-            theme={theme}
-            />
+            {AllMusic}
         </div>
         )
 }

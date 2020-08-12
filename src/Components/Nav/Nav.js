@@ -7,6 +7,7 @@ import Tab from '@material-ui/core/Tab';
 import HomeLogo from "./HomeLogo"
 import Social from "./Social"
 import TabPanel from "./TabPanel"
+import "./Nav.css"
 
 const useStyles = makeStyles({
   root: {
@@ -21,7 +22,7 @@ const useStyles = makeStyles({
 
 export default function Nav(props) {
   const classes = useStyles();
-  const [state, setState] = useState(3)
+  const [state, setState] = useState(0)
   const [socialOpen, setSocialOpen] = useState(false)
 
   const handleChange = (event, newValue) => {
@@ -35,7 +36,7 @@ export default function Nav(props) {
   const handleMouseOut = () => {setSocialOpen(false)}
 
   return (
-    <div>
+    <div className="nav">
       <Paper square className={classes.root}>
         <Tabs
           value={state}

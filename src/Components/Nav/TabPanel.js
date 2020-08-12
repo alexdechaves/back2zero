@@ -16,8 +16,8 @@ export default function TabPanel(props) {
         {...other}
       >
         {value === index && (
-          <Box p={3}>
-            <Typography>{children}</Typography>
+          <Box height="900px" p={1}>
+            {children}
           </Box>
         )}
       </div>

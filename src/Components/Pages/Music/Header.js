@@ -27,7 +27,7 @@ export default function Header() {
         <CardMedia
           className={classes.media}
           image="/PLU.png"
-          title="Contemplative Reptile"
+          title="People Like Us"
         />
         <CardContent>
           <Typography gutterBottom variant="h5" component="h2">
