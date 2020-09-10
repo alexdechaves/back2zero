@@ -25,6 +25,7 @@ export default function StreamDownload(props) {
           <CardMedia
             className="cover"
             image={props.image}
+            key={props.key}
             title="Cover"
         />
         <div className="music-card-wrapper">
