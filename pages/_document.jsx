@@ -6,9 +6,7 @@ class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
-          <style>
-            @import url(//db.onlinewebfonts.com/c/ea250342ec4016561ba9e791c2f39c11?family=Posterama);
-          </style>
+          <link href="//db.onlinewebfonts.com/c/ea250342ec4016561ba9e791c2f39c11?family=Posterama" rel="stylesheet" type="text/css"/>
         </Head>
         <body>
           <Main />
