@@ -16,7 +16,7 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build --output public",
+    "build": "next build",
     "start": "next start",
     "lint": "yarn eslint --ext .js --ext .jsx ./ ./*.js"
   },
