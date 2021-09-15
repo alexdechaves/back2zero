@@ -3,7 +3,7 @@ import Hls from "hls.js"
 import Header from "../components/Header";
 import Index from "../components/Index";
 import Footer from "../components/Footer";
-import VideoPage from "../components/video";
+import VideoPage from "../components/Video";
 import Music from "../components/Music";
 
 const IndexPage = () => {
