@@ -53,7 +53,7 @@ const MusicItem = (props) => (
         <div>
             <h3>{props.title}</h3>
             <p>{props.blurb}</p>
-            <a>Listen</a>
+            <a href={`https://open.spotify.com/${props.spotify}`} target="_blank">Listen</a>
         </div>
     </MusicCol>
 );
@@ -62,9 +62,9 @@ const Music = () => (
     <div id="music">
         <Row center="xs">
             <MusicItem image="/images/WWLI.jpg" blurb="Single | 2021" title="World We Live In" />
-            <MusicItem image="/images/PLU_COVER_YELLOW.png" blurb="Single | 2019" title="People Like Us" />
-            <MusicItem image="/images/DRIVE.jpg" blurb="Single | 2019" title="Drive" />
-            <MusicItem image="/images/HERE_ALONE.jpg" blurb="EP | 2017" title="Here, Alone" />
+            <MusicItem image="/images/PLU_COVER_YELLOW.png"  spotify="track/5uCXgdrJXmtEJkyCmGnolJ" blurb="Single | 2019" title="People Like Us" />
+            <MusicItem image="/images/DRIVE.jpg" spotify="track/3idqvOaXKayjTZpOSHX5Cq" blurb="Single | 2019" title="Drive" />
+            <MusicItem image="/images/HERE_ALONE.jpg" spotify="album/45JKHwLPYS31eA8cuOSNAf" blurb="EP | 2017" title="Here, Alone" />
         </Row>
         <style jsx>{`
             border-bottom: 5px solid black;
