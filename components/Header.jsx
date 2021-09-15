@@ -1,14 +1,11 @@
 import styled from "styled-components";
 import { FaSpotify, FaYoutube, FaInstagram, FaFacebook } from "react-icons/fa";
-
+import { Grid, Row, Col } from 'react-flexbox-grid/dist/react-flexbox-grid';
 
 const HeaderWrapper = styled.div`
-  body{
-    margin: 0px;
-  }
+  padding-bottom: 30px;
 
   h1 {
-    font-family: "Posterama";
     text-align: center;
     letter-spacing: 5px;
     font-size: 70px;
@@ -19,12 +16,6 @@ const HeaderWrapper = styled.div`
 
   h1:hover {
     text-shadow: 0px 0px 10px #16ccb7;
-  }
-
-  nav {
-    text-align: center;
-    border-bottom: 1px solid #e8e8e8;
-    padding-bottom: 30px;
   }
 
   a {
@@ -49,9 +40,8 @@ const HeaderWrapper = styled.div`
 const SocialWrapper = styled.div`
   position: fixed;
   top: 40%;
-  left: 0;
+  left: 5px;
   z-index: 999;
-  border: 1px solid white;
   border-radius: 5px;
   background-color: rgba(35, 35, 35, 0.6);
   box-shadow: 0px 0px 40px #232323;
@@ -74,37 +64,48 @@ const SocialWrapper = styled.div`
 
 const Social = () => (
   <SocialWrapper>
-    <a href="/">
+    <a href="https://open.spotify.com/artist/14lcNgeRqudVELvxmaQIEw?si=N1D8yVBdTOaAAzvkS7hFeg" target="_blank">
       <FaSpotify size={40} />
     </a>
-    <a>
+    <a href="https://www.youtube.com/channel/UCyl883LKt8hfMgHPCkyXh4A" target="_blank">
       <FaYoutube size={40} />
     </a>
-    <a>
+    <a href="https://www.instagram.com/_back2zero_/" target="_blank">
       <FaInstagram size={40} />
     </a>
-    <a>
+    <a href="https://www.facebook.com/back2zeromusic/" target="_blank">
       <FaFacebook size={40} />
     </a>
   </SocialWrapper>
 )
 
 const Header = () => (
-  <div>
+  <Grid>
     <HeaderWrapper>
       <h1>
       BACK 2 ZERO
       </h1>
-      <nav>
-        <a href="/music">MUSIC</a>
-        <a href="/video">VIDEO</a>
-        <a href="/photos">PHOTOS</a>
-        <a href="/tour">TOUR</a>
-        <a href="/contact">CONTACT</a>
-      </nav>
+      <img src=""></img>
+      <Row center="xs">
+          <Col xs={12} md={2}>
+            <a href="#music">MUSIC</a>
+          </Col>
+          <Col xs={12} md={2}>
+            <a href="#video">VIDEO</a>
+          </Col>
+          <Col xs={12} md={2}>
+          <a href="#photos">PHOTOS</a>
+          </Col>
+          <Col xs={12} md={2}>
+          <a href="#tour">TOUR</a>
+          </Col>
+          <Col xs={12} md={2}>
+          <a href="#contact">CONTACT</a>
+          </Col>
+      </Row>
     </HeaderWrapper>
     <Social />
-  </div>
+  </Grid>
 );
 
 export default Header;

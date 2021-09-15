@@ -3,6 +3,8 @@ import Hls from "hls.js"
 import Header from "../components/Header";
 import Index from "../components/Index";
 import Footer from "../components/Footer";
+import VideoPage from "../components/video";
+import Music from "../components/Music";
 
 const IndexPage = () => {
   const videoRef = useRef()
@@ -18,12 +20,9 @@ const IndexPage = () => {
     <div>
       <Header />
       <Index videoRef={videoRef}/>
+      <Music />
+      <VideoPage />
       <Footer />
-      <style jsx global>{`
-        body {
-          margin: 0px;
-        }
-    `}</style>
     </div>
   )
 };

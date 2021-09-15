@@ -1,9 +1,8 @@
 import styled from "styled-components";
+import { mq } from "./style-vars";
 
-export const WrapperCard = styled.div`
+const WrapperCard = styled.div`
   background-color: white;
-  width: 700px;
-  height: 350px;
   font-family: "Posterama";
   transition: padding, 0.3s;
   margin: 10px auto;
@@ -17,13 +16,19 @@ export const WrapperCard = styled.div`
   margin-right: auto;
   left: 0;
   right: 0;
-  bottom: 6em;
+  bottom: 20%;
   text-align: center;
   position: absolute;
+  width: 200px;
+  height: 100px;
 
   div {
     text-align: left;
-    margin: 30px;
+    margin: 5px;
+
+    ${mq.breakpoint('md')} {
+      margin: 30px;
+    }
 
     h2:nth-child(2) {
       margin-bottom: 60px;
@@ -41,6 +46,11 @@ export const WrapperCard = styled.div`
   a:hover {
     background-color: #ff7eb7;
   }
+
+  ${mq.breakpoint('md')} {
+    width: 700px;
+    height: 350px;
+  }
 `;
 
 
@@ -51,6 +61,11 @@ const Wrapper = styled.div`
   video {
     opacity: 0.6;
     width: 100%;
+    padding: 50px 0px;
+
+    ${mq.breakpoint('md')} {
+      padding: 0px;
+    }
   }
 `;
 
@@ -62,6 +77,11 @@ const ImgContainer = styled.div`
   display: flex;
   justify-content: center;
   border-bottom: 5px solid black;
+
+  iframe {
+    width: 960px;
+    height: 540px;
+  }
 `;
 
 const Index = (props) => (
@@ -69,15 +89,15 @@ const Index = (props) => (
     <Wrapper>
       <video ref={props.videoRef} nocontrols autoplay loop muted></video>
       <WrapperCard>
-      <img src="/images/WWLI.jpg"></img>
-      <div>
-        <h2>New Single</h2><h1>World We Live In</h1><h2>Out Now</h2>
-        <a href="http://spotify.com">Listen</a>
-      </div>
-    </WrapperCard>
+        <img src="/images/WWLI.jpg"></img>
+        <div>
+          <h2>New Single</h2><h1>World We Live In</h1><h2>Out Now</h2>
+          <a href="http://spotify.com">Listen</a>
+        </div>
+      </WrapperCard>
     </Wrapper>
     <ImgContainer>
-      <iframe width="960" height="540" src="https://www.youtube.com/embed/swlG2B8JAIE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/w1cFGFnIAcE?feature=oembed" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </ImgContainer>
   </div>
 );
