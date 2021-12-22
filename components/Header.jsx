@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import { FaSpotify, FaYoutube, FaInstagram, FaFacebook } from "react-icons/fa";
+import { SiTiktok } from "react-icons/si";
 import { Grid, Row, Col } from 'react-flexbox-grid/dist/react-flexbox-grid';
+import { mq } from "./style-vars"
 
 const HeaderWrapper = styled.div`
   padding-bottom: 30px;
@@ -31,7 +33,11 @@ const HeaderWrapper = styled.div`
   }
 
   a:hover {
-    padding: 10px 18px;
+    padding: 1px;
+
+    ${mq.breakpoint('md')} {
+      padding: 10px 18px;
+    }
     border: 2px solid #FF308B;
     box-shadow: 0px 0px 10px #16ccb7;
   }
@@ -75,6 +81,9 @@ const Social = () => (
     </a>
     <a href="https://www.facebook.com/back2zeromusic/" target="_blank">
       <FaFacebook size={40} />
+    </a>
+    <a href="https://www.tiktok.com/@back2zeromusic" target="_blank">
+      <SiTiktok size={40} />
     </a>
   </SocialWrapper>
 )

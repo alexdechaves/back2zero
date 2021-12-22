@@ -1,11 +1,11 @@
 import styled from "styled-components";
 import { mq } from "./style-vars";
 import { Grid, Row, Col } from 'react-flexbox-grid/dist/react-flexbox-grid'
+import { Label } from "./Label";
 
 const MusicCol = styled(Col)`
     height: inherit;
     color: black;
-    font-size: 20px;
     display: flex;
     border: 1px solid black;
     margin: 60px;
@@ -17,14 +17,19 @@ const MusicCol = styled(Col)`
     padding-left: 0px; // hack
 
     img {
-        width: 300px;
+        width: 170px;
+        height: 170px;
+        ${mq.breakpoint('md')} {
+            width: 300px;
+            height: 300px;
+        }
     }
 
     div {
         padding-left: 10px;
         display: flex;
         flex-direction: column;
-        width: 100%;
+        width: inherit;
     }
 
     a {
@@ -36,10 +41,24 @@ const MusicCol = styled(Col)`
         width: 70px;
         cursor: pointer;
     }
+    
+    h3 {
+        margin-block-start: 1em;
+        margin-block-end: 0em;
+
+        ${mq.breakpoint('md')} {
+            margin-block-start: 3em;
+        }
+    }
 
     p {
         color: #797979;
         margin-bottom: 20px;
+        font-size: 12px;
+
+        ${mq.breakpoint('md')} {
+            font-size: 20px;
+        }
     }
     
     a:hover {
@@ -48,7 +67,7 @@ const MusicCol = styled(Col)`
 `;
 
 const MusicItem = (props) => (
-    <MusicCol xs={12} lg={4}>
+    <MusicCol xs={11} lg={4}>
         <img src={props.image}></img>
         <div>
             <h3>{props.title}</h3>
@@ -60,6 +79,7 @@ const MusicItem = (props) => (
 
 const Music = () => (
     <div id="music">
+        <Label>MUSIC</Label>
         <Row center="xs">
             <MusicItem image="/images/WWLI.jpg" blurb="Single | 2021" title="World We Live In" />
             <MusicItem image="/images/PLU_COVER_YELLOW.png"  spotify="track/5uCXgdrJXmtEJkyCmGnolJ" blurb="Single | 2019" title="People Like Us" />
@@ -68,10 +88,10 @@ const Music = () => (
         </Row>
         <style jsx>{`
             border-bottom: 5px solid black;
-            padding-top: 100px;
-            padding-bottom: 100px;
             background-image: url("/images/stars.jpg");
             background-size: cover;
+            margin-right: 0px;
+            margin-left: 0px;
         `}</style>
   </div>
 );

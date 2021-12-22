@@ -35,6 +35,10 @@ const WrapperCard = styled.div`
     }
   }
 
+  img {
+    height: inherit;
+  }
+
   a {
     background-color: #FF308B;
     border-radius: 5px;
@@ -73,14 +77,23 @@ const ImgContainer = styled.div`
   width: 100%;
   height: 100%;
   background-image: url("/images/WWLI.jpg");
-  padding: 200px 0px;
+  padding: 75px 0px;
   display: flex;
   justify-content: center;
   border-bottom: 5px solid black;
 
+  ${mq.breakpoint('md')} {
+    padding: 200px 0px;
+  }
+
   iframe {
-    width: 960px;
-    height: 540px;
+    width: 90%;
+    height: 300px;
+
+    ${mq.breakpoint('md')} {
+      width: 960px;
+      height: 540px;
+    }
   }
 `;
 
