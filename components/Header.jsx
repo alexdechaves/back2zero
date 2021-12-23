@@ -22,14 +22,18 @@ const HeaderWrapper = styled.div`
 
   a {
     font-family: "Posterama";
-    padding: 10px 20px;
-    margin: 5px 50px;
+    padding: 0px;
     border-radius: 2px;
     text-decoration: none;
     color: black;
     font-size: 20px;
     letter-spacing: 5px;
     transition: box-shadow 0.5s;
+
+    ${mq.breakpoint('md')} {
+      padding: 10px 20px;
+      margin: 5px 50px;
+    }
   }
 
   a:hover {
@@ -52,7 +56,6 @@ const SocialWrapper = styled.div`
   background-color: rgba(35, 35, 35, 0.6);
   box-shadow: 0px 0px 40px #232323;
   
-
   display: flex;
   flex-direction: column;
 
@@ -66,6 +69,10 @@ const SocialWrapper = styled.div`
     color: #16ccb7;
     cursor: pointer;
   }
+`
+
+const HeadCol = styled(Col)`
+  margin: 10px 0px;
 `
 
 const Social = () => (
@@ -96,24 +103,24 @@ const Header = () => (
       </h1>
       <img src=""></img>
       <Row center="xs">
-          <Col xs={12} md={2}>
+          <HeadCol xs={4} md={2}>
             <a href="#music">MUSIC</a>
-          </Col>
-          <Col xs={12} md={2}>
+          </HeadCol>
+          <HeadCol xs={4} md={2}>
             <a href="#video">VIDEO</a>
-          </Col>
-          <Col xs={12} md={2}>
+          </HeadCol>
+          <HeadCol xs={4} md={2}>
           <a href="#photos">PHOTOS</a>
-          </Col>
-          <Col xs={12} md={2}>
+          </HeadCol>
+          <HeadCol xs={4} md={2}>
           <a href="#tour">TOUR</a>
-          </Col>
-          <Col xs={12} md={2}>
+          </HeadCol>
+          <HeadCol xs={4} md={2}>
           <a href="#contact">CONTACT</a>
-          </Col>
+          </HeadCol>
       </Row>
     </HeaderWrapper>
-    {/* <Social /> */}
+    <Social />
   </Grid>
 );
 
