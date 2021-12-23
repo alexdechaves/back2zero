@@ -10,3 +10,8 @@ body {
 div[class*='flexboxgrid2__row'] {
     margin: 0;
 }
+
+@font-face {
+    font-family: "Posterama";
+    src: url("./public/fonts/ea250342ec4016561ba9e791c2f39c11.ttf") format("truetype") /* chrome firefox opera Safari, Android, iOS 4.2+*/
+}

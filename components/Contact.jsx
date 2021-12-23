@@ -2,7 +2,6 @@ import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import { Row, Col } from "react-flexbox-grid/dist/react-flexbox-grid"
 import { Label } from './Label';
-import { mq } from "./style-vars"
 
 const SideInfo = styled.div`
     letter-spacing: 3px;
