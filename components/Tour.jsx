@@ -6,9 +6,6 @@ import { mq } from "./style-vars"
 
 const TourWrapper = styled.div`
     padding-bottom: 50px;
-    top: 50%;
-    left: 50%;
-    z-index: 2;
 
     a {
         text-decoration: none;
@@ -18,10 +15,15 @@ const TourWrapper = styled.div`
 
 const EventCard = styled.div`
     display: flex;
+    flex-direction: column;
     border-top: 1px solid grey;
     border-bottom: 1px solid grey;
     padding: 30px 0px;
     transition: background-color 0.2s;
+
+    ${mq.breakpoint('md')} {
+        flex-direction: row;
+    }
 
     &:hover {
         background-color: #e7e7e7;
@@ -50,6 +52,12 @@ const DateLocationElement = styled.div`
     margin: auto 0;
     font-size: 20px;
     letter-spacing: 5px;
+    padding: 10px 0px;
+
+    ${mq.breakpoint('md')} {
+        flex-direction: row;
+        padding: 0px;
+    }
 `
 
 const VenueName = styled.div`
@@ -75,7 +83,7 @@ const Tour = () => {
             <Label color="black">TOUR</Label>
             {events && events.map(event => (
                 <Row center="xs">
-                    <Col xs={9}>
+                    <Col xs={11} lg={9}>
                         <a href={event.url} target="_blank">
                         <EventCard>
                             <DateLocationElement><span>{new Date(event.datetime).toDateString()}</span></DateLocationElement>

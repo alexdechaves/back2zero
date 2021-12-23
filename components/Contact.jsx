@@ -2,10 +2,12 @@ import React, { useState, useRef } from 'react';
 import styled from 'styled-components';
 import { Row, Col } from "react-flexbox-grid/dist/react-flexbox-grid"
 import { Label } from './Label';
+import { mq } from "./style-vars"
 
 const SideInfo = styled.div`
     letter-spacing: 3px;
     color: black;
+    font-size 14px;
 
     a {
         color: #FF308B;
@@ -151,15 +153,15 @@ const Contact = () => (
     <div id="contact">
         <Label color="black">CONTACT US</Label>
         <Row center="xs">
-            <Col xs={3}>
+            <Col xs={12} md={6}>
+                <Form>
+                </Form>
+            </Col>
+            <Col xs={12} md={3}>
                 <SideInfo>
                     <h3>Booking:<br></br><a href="mailto:back2zeromusic@yahoo.com">back2zeromusic@yahoo.com</a></h3>
                     <h3>Manager:<br></br><a href="mailto:chris.longo@gmail.com">chris.longo@gmail.com</a></h3>
                 </SideInfo>
-            </Col>
-            <Col xs={6}>
-                <Form>
-                </Form>
             </Col>
         </Row>
     </div>

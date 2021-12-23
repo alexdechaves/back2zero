@@ -28,7 +28,6 @@ const Footer = (props) => (
             letter-spacing: 5px;
             font-size: 20px;
         }
-
     `}</style>
   </div>
 );

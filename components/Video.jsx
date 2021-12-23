@@ -41,7 +41,7 @@ const VideoCard = (props) => {
     const [thumb, setThumb] = useState()
     const [title, setTitle] = useState()
 
-    useEffect(() => {
+    useEffect(async () => {
         fetch(`https://www.youtube.com/oembed?url=${props.url}&format=json`)
         .then(data => data.json())
         .then(data => {
@@ -49,7 +49,6 @@ const VideoCard = (props) => {
             setImage(data.thumbnail_url)
             setTitle(data.title)
         })
-        .then(() => setImage(thumb))
     }, [])
 
 

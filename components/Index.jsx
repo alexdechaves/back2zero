@@ -3,8 +3,8 @@ import { mq } from "./style-vars";
 
 const WrapperCard = styled.div`
   background-color: white;
-  font-family: "Posterama";
-  transition: padding, 0.3s;
+  align-self: center;
+  transition: padding,0.3s;
   margin: 10px auto;
   display: flex;
   justify-content: center;
@@ -16,15 +16,20 @@ const WrapperCard = styled.div`
   margin-right: auto;
   left: 0;
   right: 0;
-  bottom: 20%;
   text-align: center;
   position: absolute;
-  width: 200px;
-  height: 100px;
+  width: 350px;
+  height: 200px;
+
+  h1, h2 {
+    font-size: 15px;
+  }
 
   div {
     text-align: left;
-    margin: 5px;
+    padding: 0px 5px;
+    display: flex;
+    flex-direction: column;
 
     ${mq.breakpoint('md')} {
       margin: 30px;
@@ -36,15 +41,16 @@ const WrapperCard = styled.div`
   }
 
   img {
-    height: inherit;
+    height: 200px;
   }
 
   a {
     background-color: #FF308B;
     border-radius: 5px;
     text-decoration: none;
-    padding: 15px 30px;
+    padding: 10px 30px;
     color: white;
+    text-align: center;
   }
 
   a:hover {
@@ -54,6 +60,22 @@ const WrapperCard = styled.div`
   ${mq.breakpoint('md')} {
     width: 700px;
     height: 350px;
+
+    img {
+      height: inherit;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    h1 {
+      font-size: 25px;
+    }
+
+    a {
+      padding: 15px 30px;
+    }
   }
 `;
 
@@ -61,14 +83,18 @@ const WrapperCard = styled.div`
 
 const Wrapper = styled.div`
   background-color: black;
+  display: flex;
+  justify-content: center;
 
   video {
     opacity: 0.6;
+    height: 325px;
     width: 100%;
-    padding: 50px 0px;
+    padding: 0px;
+    object-fit: cover;
 
     ${mq.breakpoint('md')} {
-      padding: 0px;
+      height: 100%;
     }
   }
 `;

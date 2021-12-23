@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import styled from "styled-components"
 import { Row, Col } from 'react-flexbox-grid/dist/react-flexbox-grid'
 import { Label } from "./Label";
+import { mq } from "./style-vars"
 
 const images = [
     "/images/instagram/1.jpg",
@@ -31,8 +32,12 @@ const PhotoCard = styled.div`
 
     img {
         object-fit: cover;
-        width: 600px;
-        height: 400px;
+        width: 100%;
+
+        ${mq.breakpoint('lg')} {
+            width: 600px;
+            height: 400px;
+        }
     }
 `
 
@@ -55,6 +60,14 @@ const Backdrop = styled.div`
     justify-content: center;
     background-color: rgba(0, 0, 0, 0.7);
     -webkit-tap-highlight-color: transparent;
+
+    img {
+        width: 100%;
+
+        ${mq.breakpoint('md')} {
+            width: auto;
+        }
+    }
 `
 
 
@@ -72,7 +85,7 @@ const Photos = () => {
             <Row>
             {images.map((image, index) => {
                 return(
-                    <Col xs={11} md={6} lg={4}>
+                    <Col xs={12} md={6} lg={4}>
                         <PhotoCard onClick={() => setBackdropImage(image)}>
                             <img key={index} src={image} ></img>
                         </PhotoCard>
