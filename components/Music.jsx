@@ -81,7 +81,8 @@ const Music = () => (
     <div id="music">
         <Label>MUSIC</Label>
         <Row center="xs">
-            <MusicItem image="/images/WWLI.jpg" blurb="Single | 2021" title="World We Live In" />
+            <MusicItem image="/images/WWLI.jpg" blurb="Single | 2021" title="Lie To Me" spotify="track/3U84nyXGq7taMYdMcdMeZm"/>
+            <MusicItem image="/images/WWLI.jpg" blurb="Single | 2021" title="World We Live In" spotify="track/4basfPrTYFvNYwPNq9NLOs"/>
             <MusicItem image="/images/PLU_COVER_YELLOW.png"  spotify="track/5uCXgdrJXmtEJkyCmGnolJ" blurb="Single | 2019" title="People Like Us" />
             <MusicItem image="/images/DRIVE.jpg" spotify="track/3idqvOaXKayjTZpOSHX5Cq" blurb="Single | 2019" title="Drive" />
             <MusicItem image="/images/HERE_ALONE.jpg" spotify="album/45JKHwLPYS31eA8cuOSNAf" blurb="EP | 2017" title="Here, Alone" />

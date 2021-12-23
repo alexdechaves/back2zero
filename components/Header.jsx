@@ -113,7 +113,7 @@ const Header = () => (
           </Col>
       </Row>
     </HeaderWrapper>
-    <Social />
+    {/* <Social /> */}
   </Grid>
 );
 

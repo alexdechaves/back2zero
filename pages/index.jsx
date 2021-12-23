@@ -6,6 +6,8 @@ import Footer from "../components/Footer";
 import VideoPage from "../components/Video";
 import Music from "../components/Music";
 import Photos from "../components/Photos";
+import Contact from "../components/Contact";
+import Tour from "../components/Tour";
 
 const IndexPage = () => {
   const videoRef = useRef()
@@ -19,12 +21,18 @@ const IndexPage = () => {
   
   return (
     <div>
-      <Header />
-      <Index videoRef={videoRef}/>
-      <Music />
-      <VideoPage />
-      <Photos />
-      <Footer />
+      <nav>
+        <Header />
+      </nav>
+      <section>
+        <Index videoRef={videoRef}/>
+        <Music />
+        <VideoPage />
+        <Photos />
+        <Tour />
+        <Contact />
+        <Footer />
+      </section>
     </div>
   )
 };

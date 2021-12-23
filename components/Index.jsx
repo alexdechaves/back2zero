@@ -104,8 +104,8 @@ const Index = (props) => (
       <WrapperCard>
         <img src="/images/WWLI.jpg"></img>
         <div>
-          <h2>New Single</h2><h1>World We Live In</h1><h2>Out Now</h2>
-          <a href="http://spotify.com">Listen</a>
+          <h2>New Singles</h2><h1>'World We Live In' & 'Lie To Me'</h1><h2>Out Now</h2>
+          <a href="https://open.spotify.com/album/12R2wa2gg7d2A2vmGKUEd5?si=5X0pORs8QnmeGsjtPWqjFA">Listen</a>
         </div>
       </WrapperCard>
     </Wrapper>
