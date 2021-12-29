@@ -10,8 +10,8 @@ class MyDocument extends Document {
           <meta property="og:url" content="https://back2zero.vercel.app/"></meta>
           <meta property="og:type" content="website"></meta>
           <meta property="og:title" content="Back 2 Zero | Official Site"></meta>
-          <meta property="og:description" content=""></meta>
-          <meta property="og:image" content="/images/0036.jpeg"></meta>
+          <meta name="description" content="Back 2 Zero's official site. New singles 'Lie to Me' and 'World We Live In' out now."></meta>
+          <meta property="og:image" content="/images/thumb.jpg"></meta>
         </Head>
         <body>
           <Main />
