@@ -89,7 +89,7 @@ const Music = () => (
         </Row>
         <style jsx>{`
             border-bottom: 5px solid black;
-            background-image: url("/images/blur.png");
+            background-image: url("/images/blur.jpg");
             background-size: cover;
             margin-right: 0px;
             margin-left: 0px;
